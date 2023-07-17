@@ -1,7 +1,0 @@
-framework:
-    secret: "shdhkajshdjhsjdjsahdkjas"
-    test: true
-    cache:
-        pools:
-            gearman_cache:
-                adapter: cache.adapter.array
