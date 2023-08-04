@@ -9,17 +9,7 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 class GearmanExtension extends Extension
 {
-    /**
-     * Loads a specific configuration.
-     *
-     * @param array            $configs    An array of configuration values
-     * @param ContainerBuilder $container A ContainerBuilder instance
-     *
-     * @throws \InvalidArgumentException When provided tag is not defined in this extension
-     *
-     * @api
-     */
-    public function load(array $configs, ContainerBuilder $container)
+    public function load(array $configs, ContainerBuilder $container): void
     {
         $configuration = new Configuration();
         $configs = $this->processConfiguration($configuration, $configs);
