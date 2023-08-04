@@ -50,12 +50,12 @@ class GearmanCacheWrapper implements CacheClearerInterface, CacheWarmerInterface
         return $this;
     }
 
-    public function clear($cacheDir)
+    public function clear($cacheDir): void
     {
         $this->cache->delete($this->cacheId);
     }
 
-    public function warmUp($cacheDir)
+    public function warmUp($cacheDir): array
     {
         $this->load();
 
